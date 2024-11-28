@@ -1,0 +1,14 @@
+baseURL = "http://example.org/"
+languageCode = "en-us"
+title = "My Site Title"
+theme = "minimal"
+
+[params]
+  description = "Your site description here"
+  author = "Your Name"
+  github = "yourgithub"
+  twitter = "yourtwitter"
+
+[markup]
+  [markup.highlight]
+    style = "monokai" 

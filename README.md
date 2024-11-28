@@ -21,43 +21,49 @@ A minimalist, monospaced Hugo theme inspired by firchwm.xyz. Features a dark col
 
 2. Clone this theme into the themes directory:
    ```bash
-   git clone https://github.com/yourusername/hugo-minimal-theme themes/minimal
+   git clone https://github.com/F1PWE/minimalt themes/minimal
    ```
 
-3. Add the theme to your site's configuration in `config.toml`:
-   ```toml
-   theme = "minimal"
+3. Copy the example config file to your site root:
+   ```bash
+   cp themes/minimal/exampleSite/config.toml .
    ```
 
-## Configuration
+## Customization
 
-Example `config.toml`:
+### Site Configuration
+Edit your `config.toml`:
 ```toml
-baseURL = "http://example.org/"
+baseURL = "your-site-url"
 languageCode = "en-us"
-title = "My Minimal Blog"
+title = "Your Site Title"
 
 [params]
-  description = "A minimal blog template"
+  description = "Your site description"
   author = "Your Name"
-  github = "yourusername"
-  twitter = "yourusername"
-
-[markup]
-  [markup.highlight]
-    style = "monokai"
+  github = "yourgithub"
+  twitter = "yourtwitter"
 ```
 
-## Creating Content
+### Content Structure
+```
+content/
+├── _index.md          # Homepage content (optional)
+├── about/
+│   └── index.md       # About page
+└── posts/             # Blog posts directory
+    ├── post-1.md
+    └── post-2.md
+```
 
-### Blog Posts
-To create a new blog post:
+### Creating Content
+
+Create a new post:
 ```bash
 hugo new posts/my-post.md
 ```
 
-### About Page
-To create an about page:
+Create an about page:
 ```bash
 hugo new about/index.md
 ```
@@ -70,19 +76,6 @@ hugo server -D
 ```
 
 Your site will be available at `http://localhost:1313/`
-
-## Project Structure
-```
-.
-├── layouts/
-│   ├── _default/
-│   │   ├── baseof.html    # Base template
-│   │   ├── list.html      # List template
-│   │   └── single.html    # Single post template
-│   └── index.html         # Homepage template
-├── static/                # Static files
-└── theme.toml            # Theme metadata
-```
 
 ## License
 

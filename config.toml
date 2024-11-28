@@ -1,6 +1,6 @@
 baseURL = "http://example.org/"
 languageCode = "en-us"
-title = "My Minimal Blog"
+title = "Your Desired Site Title"
 
 [params]
   description = "A minimal blog template inspired by firchwm.xyz"
