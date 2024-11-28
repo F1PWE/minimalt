@@ -19,9 +19,10 @@ A minimalist, monospaced Hugo theme inspired by firchwm.xyz. Features a dark col
    cd your-site-name
    ```
 
-2. Clone this theme into the themes directory:
+2. Initialize git and add the theme as a submodule:
    ```bash
-   git clone https://github.com/F1PWE/minimalt themes/minimal
+   git init
+   git submodule add https://github.com/F1PWE/minimalt themes/minimal
    ```
 
 3. Copy the example config file to your site root:
