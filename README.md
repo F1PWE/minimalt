@@ -1,7 +1,17 @@
-# Minimal Lowercase Hugo Theme
+# minimal-lowercase
 
-A minimal, lowercase Hugo theme with a dark color scheme.
+a minimal, lowercase hugo theme with dark colors and monospace font.
 
-## Installation
+![screenshot](screenshot.png)
 
-### As a Git Submodule (recommended) 
+## features
+- lowercase everything
+- dark theme
+- monospace font
+- clean and minimal
+- responsive design
+- code highlighting
+
+## quick start
+
+### as git submodule
