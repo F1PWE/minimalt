@@ -4,7 +4,7 @@ title = "Your Site Title"
 theme = "minimal"
 
 [params]
-  description = "your new description here"
+  description = "welcome to my digital space"
   author = "Your Name"
   github = "yourgithub"
   twitter = "yourtwitter"
