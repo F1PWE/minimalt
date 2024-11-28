@@ -1,0 +1,13 @@
+{{ define "main" }}
+<div class="links-page">
+    <h2>links</h2>
+    {{ .Content }}
+    
+    {{ if .Site.Params.showWebring }}
+    <div class="webring-info">
+        <h3>webring</h3>
+        <p>this site is part of the {{ .Site.Params.webringName | default "minimalist" }} webring</p>
+    </div>
+    {{ end }}
+</div>
+{{ end }} 

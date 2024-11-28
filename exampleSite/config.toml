@@ -1,13 +1,25 @@
 baseURL = "http://example.org/"
 languageCode = "en-us"
-title = "My Site Title"
-theme = "minimal"
+title = "Example Site"
 
 [params]
-  description = "Your site description here"
+  description = "A minimal blog with retro vibes"
   author = "Your Name"
   github = "yourgithub"
   twitter = "yourtwitter"
+  showSocial = true
+  
+  # Neo theme options
+  showConstruction = true
+  showWebring = true
+  webringPrev = "#"
+  webringNext = "#"
+  webringRandom = "#"
+  webringName = "minimalist"
+  show88x31 = true
+  showVisitorCounter = true
+  visitorCount = "000042"
+  linksPage = true
 
 [markup]
   [markup.highlight]

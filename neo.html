@@ -35,6 +35,7 @@
             border: 1px solid #333;
             margin: 0.5rem;
             color: #909090;
+            text-decoration: none;
         }
 
         .button:hover {
@@ -45,6 +46,7 @@
         .construction {
             color: #ff6b6b;
             margin: 1rem 0;
+            text-align: center;
         }
 
         .badges {
@@ -52,6 +54,7 @@
             display: flex;
             flex-wrap: wrap;
             gap: 4px;
+            justify-content: center;
         }
 
         .badges img {
@@ -64,6 +67,7 @@
             font-size: 0.8em;
             color: #666;
             margin-top: 2rem;
+            text-align: center;
         }
 
         pre {
@@ -77,19 +81,61 @@
             font-family: monospace;
             color: #00ff00;
             margin: 2rem 0;
+            text-align: center;
+        }
+
+        .post-list {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        .post-date {
+            color: #909090;
+            font-size: 0.9em;
+        }
+
+        a {
+            color: #909090;
+            text-decoration: none;
+        }
+
+        a:hover {
+            color: #fff;
+        }
+
+        h2, h3 {
+            color: #fff;
+        }
+
+        .description {
+            text-align: center;
+            margin-bottom: 3rem;
+            padding-bottom: 1rem;
+            border-bottom: 1px solid #333;
+        }
+
+        .recent-posts {
+            margin: 2rem 0;
+        }
+
+        .social-links {
+            margin-top: 2rem;
+            text-align: center;
+        }
+
+        .social-links a {
+            margin: 0 1rem;
         }
     </style>
 </head>
 <body>
     <header>
-        <pre class="ascii-art">
-/* f1pwe */
-        </pre>
+        <pre class="ascii-art">/* f1pwe */</pre>
         <nav>
-            <a href="#" class="button">main</a>
-            <a href="#" class="button">blog</a>
-            <a href="#" class="button">about</a>
-            <a href="#" class="button">links</a>
+            <a href="/" class="button">main</a>
+            <a href="/posts" class="button">blog</a>
+            <a href="/about" class="button">about</a>
+            <a href="/links" class="button">links</a>
         </nav>
     </header>
 
@@ -98,26 +144,46 @@
             🚧 always under construction 🚧
         </div>
 
-        <section>
-            <h2>recent posts</h2>
-            <ul>
-                <li>2024-03-20 - <a href="#">thoughts about minimalism</a></li>
-                <li>2024-03-15 - <a href="#">learning hugo</a></li>
-                <li>2024-03-10 - <a href="#">hello, world</a></li>
+        <div class="description">
+            <h2>welcome to my digital space</h2>
+        </div>
+
+        <section class="recent-posts">
+            <h3>recent posts</h3>
+            <ul class="post-list">
+                <li>
+                    <span class="post-date">2024-03-20</span>
+                    <a href="/posts/thoughts-about-minimalism">thoughts about minimalism</a>
+                </li>
+                <li>
+                    <span class="post-date">2024-03-15</span>
+                    <a href="/posts/learning-hugo">learning hugo</a>
+                </li>
+                <li>
+                    <span class="post-date">2024-03-10</span>
+                    <a href="/posts/hello-world">hello, world</a>
+                </li>
             </ul>
         </section>
 
-        <div class="webring">
-            [<a href="#">prev</a> | <a href="#">random</a> | <a href="#">next</a>]
-            <br>
-            part of the minimalist webring
+        <div class="social-links">
+            <a href="https://github.com/f1pwe" target="_blank">github</a>
+            <a href="https://twitter.com/f1pwe" target="_blank">twitter</a>
         </div>
 
-        <div class="badges" style="display: flex; flex-wrap: wrap; justify-content: center; gap: 0.5rem; max-width: 100%;">
-            <img src="https://cyber.dabamos.de/88x31/gnu-linux.gif" alt="GNU/Linux" width="88" height="31">
-            <img src="https://cyber.dabamos.de/88x31/gnubanner.gif" alt="GNU" width="88" height="31">
-            <img src="https://cyber.dabamos.de/88x31/linux.gif" alt="Linux" width="88" height="31">
-            <img src="https://cyber.dabamos.de/88x31/vim.gif" alt="vim" width="88" height="31">
+        <div class="webring">
+            [<a href="https://webring.xxiivv.com/prev">prev</a> | 
+             <a href="https://webring.xxiivv.com/random">random</a> | 
+             <a href="https://webring.xxiivv.com/next">next</a>]
+            <br>
+            part of the xxiivv webring
+        </div>
+
+        <div class="badges">
+            <img src="https://cyber.dabamos.de/88x31/gnu-linux.gif" alt="GNU/Linux">
+            <img src="https://cyber.dabamos.de/88x31/gnubanner.gif" alt="GNU">
+            <img src="https://cyber.dabamos.de/88x31/linux.gif" alt="Linux">
+            <img src="https://cyber.dabamos.de/88x31/vim.gif" alt="vim">
         </div>
 
         <div class="visitor-counter">

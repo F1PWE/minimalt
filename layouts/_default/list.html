@@ -4,7 +4,10 @@
     {{ range .Pages }}
     <li>
         <span class="post-date">{{ .Date.Format "2006-01-02" }}</span>
-        <a href="{{ .RelPermalink }}">{{ .Title }}</a>
+        <a href="{{ .RelPermalink }}" style="color: #909090;">{{ .Title }}</a>
+        {{ if .Description }}
+        <p class="post-description">{{ .Description }}</p>
+        {{ end }}
     </li>
     {{ end }}
 </ul>
