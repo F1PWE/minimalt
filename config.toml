@@ -7,6 +7,9 @@ title = "Your Desired Site Title"
   author = "f1pwe"
   github = "f1pwe"
   twitter = "f1pwe"
+  showSocial = true
+  postsPerPage = 5
+  dateFormat = "2006-01-02"
 
 [markup]
   [markup.highlight]

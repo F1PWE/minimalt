@@ -85,3 +85,30 @@ This project is licensed under the MIT License - see the LICENSE file for detail
 
 - Inspired by [firchwm.xyz](https://firchwm.xyz)
 - Built with [Hugo](https://gohugo.io/)
+
+## Updating
+
+To update the theme to the latest version:
+
+```bash
+cd themes/minimal
+git pull origin main
+```
+
+Note: If you've modified theme files directly, your changes may be overwritten. Instead:
+
+1. Create a `layouts` directory in your site root to override theme templates
+2. Create a `static` directory for custom assets
+3. Use `config.toml` for customization
+
+Example override structure:
+```
+your-site/
+├── config.toml
+├── content/
+├── layouts/           # Your custom layouts override theme layouts
+│   └── _default/
+│       └── single.html
+└── static/           # Your custom assets
+    └── custom.css
+```
