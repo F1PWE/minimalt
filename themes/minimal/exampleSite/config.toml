@@ -1,0 +1,26 @@
+baseURL = "http://example.org/"
+languageCode = "en-us"
+title = "Example Site"
+
+[params]
+  description = "welcome to my digital space"  # This will be shown on the homepage
+  author = "Your Name"
+  github = "yourgithub"
+  twitter = "yourtwitter"
+  showSocial = true
+  
+  # Neo theme options
+  showConstruction = true
+  showWebring = true
+  webringPrev = "#"
+  webringNext = "#"
+  webringRandom = "#"
+  webringName = "minimalist"
+  show88x31 = true
+  showVisitorCounter = true
+  visitorCount = "000042"
+  linksPage = true
+
+[markup]
+  [markup.highlight]
+    style = "monokai" 
