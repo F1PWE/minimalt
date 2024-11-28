@@ -1,9 +1,10 @@
 baseURL = "http://example.org/"
 languageCode = "en-us"
 title = "Your Site Title"
+theme = "minimal"
 
 [params]
-  description = "Your site description"
+  description = "your new description here"
   author = "Your Name"
   github = "yourgithub"
   twitter = "yourtwitter"
