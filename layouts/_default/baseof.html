@@ -17,34 +17,54 @@
             padding: 2rem;
             text-transform: lowercase;
         }
-        header {
-            margin-bottom: 2rem;
+        .webring {
+            margin: 2rem 0;
+            padding: 1rem;
+            border: 1px dashed #333;
+            text-align: center;
         }
-        nav {
-            margin-top: 1rem;
-        }
-        nav a {
+        .button {
+            display: inline-block;
+            padding: 0.5rem 1rem;
+            border: 1px solid #333;
+            margin: 0.5rem;
             color: #909090;
-            text-decoration: none;
-            margin-right: 1rem;
         }
-        nav a:hover {
-            color: #ffffff;
+        .button:hover {
+            background: #252525;
+            color: #fff;
         }
-        h1, h2, h3 {
-            color: #ffffff;
+        .construction {
+            color: #ff6b6b;
+            margin: 1rem 0;
         }
-        a {
-            color: #909090;
-            text-decoration: none;
+        .badges {
+            margin: 2rem 0;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 4px;
+            justify-content: center;
         }
-        a:hover {
-            color: #ffffff;
+        .badges img {
+            width: 88px;
+            height: 31px;
+            image-rendering: pixelated;
+        }
+        .last-updated {
+            font-size: 0.8em;
+            color: #666;
+            margin-top: 2rem;
         }
         pre {
-            background-color: #252525;
+            background: #252525;
             padding: 1rem;
             overflow-x: auto;
+        }
+        .ascii-art {
+            white-space: pre;
+            font-family: monospace;
+            color: #00ff00;
+            margin: 2rem 0;
         }
         .post-list {
             list-style-type: none;
@@ -54,46 +74,57 @@
             color: #909090;
             font-size: 0.9em;
         }
-        pre, code {
-            text-transform: none;
-        }
-        .description {
-            margin-bottom: 3rem;
-            padding-bottom: 1rem;
-            border-bottom: 1px solid #333;
-        }
-        .recent-posts {
-            margin-bottom: 2rem;
-        }
-        .post-description {
-            color: #909090;
-            font-size: 0.9em;
-            margin: 0.5rem 0 1rem 0;
-        }
-        .social-links {
-            margin-top: 3rem;
-            padding-top: 1rem;
-            border-top: 1px solid #333;
-        }
-        .social-links a {
-            margin-right: 1rem;
-        }
-        .post-list li {
-            margin-bottom: 1.5rem;
-        }
     </style>
 </head>
 <body>
     <header>
-        <h1>{{ .Site.Title }}</h1>
+        <pre class="ascii-art">/* {{ .Site.Title }} */</pre>
         <nav>
-            <a href="{{ .Site.BaseURL }}">main</a>
-            <a href="{{ .Site.BaseURL }}posts">posts</a>
-            <a href="{{ .Site.BaseURL }}about">about</a>
+            <a href="{{ .Site.BaseURL }}" class="button">main</a>
+            <a href="{{ .Site.BaseURL }}posts" class="button">blog</a>
+            <a href="{{ .Site.BaseURL }}about" class="button">about</a>
+            {{ if .Site.Params.linksPage }}
+            <a href="{{ .Site.BaseURL }}links" class="button">links</a>
+            {{ end }}
         </nav>
     </header>
     <main>
+        {{ if .Site.Params.showConstruction }}
+        <div class="construction">
+            🚧 always under construction 🚧
+        </div>
+        {{ end }}
+        
         {{ block "main" . }}{{ end }}
+
+        {{ if .Site.Params.showWebring }}
+        <div class="webring">
+            [<a href="{{ .Site.Params.webringPrev }}">prev</a> | 
+             <a href="{{ .Site.Params.webringRandom }}">random</a> | 
+             <a href="{{ .Site.Params.webringNext }}">next</a>]
+            <br>
+            part of the {{ .Site.Params.webringName | default "minimalist" }} webring
+        </div>
+        {{ end }}
+
+        {{ if .Site.Params.show88x31 }}
+        <div class="badges">
+            <img src="https://cyber.dabamos.de/88x31/gnu-linux.gif" alt="GNU/Linux">
+            <img src="https://cyber.dabamos.de/88x31/gnubanner.gif" alt="GNU">
+            <img src="https://cyber.dabamos.de/88x31/linux.gif" alt="Linux">
+            <img src="https://cyber.dabamos.de/88x31/vim.gif" alt="vim">
+        </div>
+        {{ end }}
+
+        {{ if .Site.Params.showVisitorCounter }}
+        <div class="visitor-counter">
+            visitors: {{ .Site.Params.visitorCount | default "000000" }}
+        </div>
+        {{ end }}
+
+        <div class="last-updated">
+            last updated: {{ now.Format "2006-01-02" }} | made with 💻 and 🖤
+        </div>
     </main>
 </body>
 </html>

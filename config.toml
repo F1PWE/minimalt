@@ -1,15 +1,25 @@
 baseURL = "http://example.org/"
 languageCode = "en-us"
-title = "Your Desired Site Title"
+title = "Your Site Title"
 
 [params]
-  description = "A minimal blog template inspired by firchwm.xyz"
-  author = "f1pwe"
-  github = "f1pwe"
-  twitter = "f1pwe"
+  description = "Your site description"
+  author = "Your Name"
+  github = "yourgithub"
+  twitter = "yourtwitter"
   showSocial = true
-  postsPerPage = 5
-  dateFormat = "2006-01-02"
+  
+  # Neo theme options
+  showConstruction = true
+  showWebring = true
+  webringPrev = "#"
+  webringNext = "#"
+  webringRandom = "#"
+  webringName = "minimalist"
+  show88x31 = true
+  showVisitorCounter = true
+  visitorCount = "000042"
+  linksPage = true
 
 [markup]
   [markup.highlight]
