@@ -1,0 +1,14 @@
+baseURL = "http://example.org/"
+languageCode = "en-us"
+title = "My Minimal Blog"
+
+[params]
+  description = "A minimal blog template inspired by firchwm.xyz"
+  author = "f1pwe"
+  github = "f1pwe"
+  twitter = "f1pwe"
+
+[markup]
+  [markup.highlight]
+    style = "monokai"
+

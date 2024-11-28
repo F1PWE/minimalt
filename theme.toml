@@ -1,0 +1,12 @@
+name = "minimal-lowercase"
+license = "MIT"
+licenselink = "https://github.com/yourusername/minimal-lowercase/blob/main/LICENSE"
+description = "A minimal lowercase blog theme"
+homepage = "https://github.com/yourusername/minimal-lowercase"
+tags = ["blog", "minimal", "dark", "monospace"]
+features = ["blog"]
+min_version = "0.41.0"
+
+[author]
+  name = "f1pwe"
+  homepage = "https://github.com/f1pwe" 

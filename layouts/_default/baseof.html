@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="{{ if .IsHome }}{{ .Site.Params.description }}{{ else }}{{ .Summary }}{{ end }}">
+    <meta name="author" content="{{ .Site.Params.author }}">
+    <title>{{ if .IsHome }}{{ .Site.Title }}{{ else }}{{ .Title }} - {{ .Site.Title }}{{ end }}</title>
+    <style>
+        body {
+            background-color: #1a1a1a;
+            color: #e0e0e0;
+            font-family: monospace;
+            line-height: 1.6;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 2rem;
+            text-transform: lowercase;
+        }
+        header {
+            margin-bottom: 2rem;
+        }
+        nav {
+            margin-top: 1rem;
+        }
+        nav a {
+            color: #909090;
+            text-decoration: none;
+            margin-right: 1rem;
+        }
+        nav a:hover {
+            color: #ffffff;
+        }
+        h1, h2, h3 {
+            color: #ffffff;
+        }
+        a {
+            color: #909090;
+            text-decoration: none;
+        }
+        a:hover {
+            color: #ffffff;
+        }
+        pre {
+            background-color: #252525;
+            padding: 1rem;
+            overflow-x: auto;
+        }
+        .post-list {
+            list-style-type: none;
+            padding: 0;
+        }
+        .post-date {
+            color: #909090;
+            font-size: 0.9em;
+        }
+        pre, code {
+            text-transform: none;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>{{ .Site.Title }}</h1>
+        <nav>
+            <a href="{{ .Site.BaseURL }}">main</a>
+            <a href="{{ .Site.BaseURL }}posts">posts</a>
+            <a href="{{ .Site.BaseURL }}about">about</a>
+        </nav>
+    </header>
+    <main>
+        {{ block "main" . }}{{ end }}
+    </main>
+</body>
+</html>
+
